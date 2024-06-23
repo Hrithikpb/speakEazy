@@ -32,5 +32,5 @@ export function TopEmotions({ className, emotions, numEmotions }: TopEmotionsPro
 }
 
 TopEmotions.defaultProps = {
-  numEmotions: 3,
+  numEmotions: 5,
 };
