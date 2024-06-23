@@ -32,14 +32,10 @@ export function FaceWidgets({ onCalibrate }: FaceWidgetsProps) {
   const maxReconnects = 3;
   const loaderNames: EmotionName[] = [
     "Calmness",
-    "Joy",
     "Amusement",
     "Anger",
     "Confusion",
-    "Disgust",
     "Sadness",
-    "Horror",
-    "Surprise (negative)",
   ];
 
   useEffect(() => {
