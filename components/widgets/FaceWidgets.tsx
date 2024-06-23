@@ -1,6 +1,7 @@
 import { Emotion, EmotionName } from "../../lib/data/emotion";
 import { None, Optional } from "../../lib/utilities/typeUtilities";
 import { useContext, useEffect, useRef, useState } from "react";
+import { useRouter } from 'next/router'; 
 
 import { AuthContext } from "../menu/Auth";
 import { Descriptor } from "./Descriptor";
@@ -37,6 +38,7 @@ export function FaceWidgets({ onCalibrate }: FaceWidgetsProps) {
     "Confusion",
     "Sadness",
   ];
+  const router = useRouter();
 
   useEffect(() => {
     console.log("Mounting component");
@@ -223,6 +225,10 @@ export function FaceWidgets({ onCalibrate }: FaceWidgetsProps) {
     }
   }
 
+  function handleButtonClick() {
+    router.push('/feedback'); 
+  }
+
   return (
     <div>
       <div className="md:flex justify-center items-center">
@@ -243,6 +249,9 @@ export function FaceWidgets({ onCalibrate }: FaceWidgetsProps) {
               numLevels={numLoaderLevels}
             />
             <Descriptor className="mt-8" emotions={emotions} />
+            <div className="text-center mt-4">
+              <button onClick={handleButtonClick} className="px-4 py-2 bg-blue-500 text-white rounded">Get Feedback</button>
+            </div>
           </div>
         )}
       </div>
