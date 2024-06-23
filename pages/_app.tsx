@@ -1,3 +1,4 @@
+import "../styles/globals.css";
 import "@fontsource/poppins";
 import "@fontsource/poppins/300.css";
 import "@fontsource/poppins/400.css";
@@ -14,18 +15,20 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Hume AI | Sandbox</title>
-        <meta name="title" content="Hume AI | Sandbox" />
-        <meta name="description" content="Hume Sandbox" />
+        <title>SpeakEazy</title>
+        <meta name="title" content="Speakeazy" />
+        <meta name="description" content="Learn to speak easily." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div className="min-w-screen min-h-screen bg-neutral-100 font-main font-thin text-neutral-800">
-        <Auth>
+        <Auth> 
           <Nav />
-          <div>
-            <Component {...pageProps} />
-          </div>
+          <>
+            <div>
+              <Component {...pageProps} />
+            </div>
+          </>
           <Toolbar />
         </Auth>
       </div>

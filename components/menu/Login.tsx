@@ -19,7 +19,7 @@ export function Login({ authenticate }: LoginProps) {
     <div className="pt-40">
       <div className="grid justify-items-center px-5">
         <div className="flex w-full flex-col items-center rounded-xl border border-neutral-200 bg-white px-14 py-12 shadow md:w-[600px]">
-          <div className="pb-10 text-2xl font-bold text-neutral-700 md:text-3xl">Hume AI Sandbox</div>
+          <div className="pb-10 text-2xl font-bold text-neutral-700 md:text-3xl">SpeakEazy</div>
 
           <TextBox
             className="mb-6"
