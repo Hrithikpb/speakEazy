@@ -91,9 +91,9 @@ export function AudioWidgets({ modelName, recordingLengthMs, streamWindowLengthM
     }
     if (newPredictions.length == 0) {
       if (modelName == "burst") {
-        setStatus("No vocal bursts detected");
+        setStatus("No fillers detected.");
       } else {
-        setStatus("No speech detected");
+        setStatus("Go ahead, you are good to speak.");
       }
     }
 

@@ -11,14 +11,12 @@ export default function HomePage() {
   return (
     <div className="px-6 py-10 pb-20 sm:px-10 md:px-14">
       <div className="text-center md:text-left">
-        <div className="pb-2 text-4xl font-medium text-neutral-700">SpeakEazy</div>
-        <div className="pt-5">Select your choice for today.</div>
+        <div className="text-center pb-2 text-4xl font-medium text-neutral-700">SpeakEazy</div>
+        <div className="text-center pt-5">Select your choice for today.</div>
 
-        <div className="md:px-10 pt-12 grid grid-cols-1 md:grid-cols-2 gap-4">
-          <ModelSection name="Facial Expression" page="/face" iconClass={SmileyIcon} />
-          <ModelSection name="Speech Prosody" page="/prosody" iconClass={EarIcon} />
-          <ModelSection name="Vocal Burst" page="/burst" iconClass={MicrophoneIcon} />
-          <ModelSection name="Written Language" page="/language" iconClass={BookIcon} />
+        <div className="md:px-10 flex flex-col pt-12 grid-cols-1 md:grid-cols-2 gap-4">
+          <ModelSection name="Record with web cam" page="/face" iconClass={SmileyIcon} />
+          <ModelSection name="Record with mic only" page="/burst" iconClass={MicrophoneIcon} />
         </div>
       </div>
     </div>

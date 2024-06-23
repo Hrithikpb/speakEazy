@@ -3,12 +3,15 @@ import { TextBox } from "../inputs/TextBox";
 import { useKeypress } from "../../lib/hooks/keyPress";
 import { useState } from "react";
 
+const HUME_API_KEY = process.env.REACT_APP_HUME_API_KEY;
+
 type LoginProps = {
   authenticate: (key: string) => void;
 };
 
 export function Login({ authenticate }: LoginProps) {
-  const [key, setKey] = useState("");
+  const [key, setKey] = useState(HUME_API_KEY || "");
+
   useKeypress("Enter", () => authenticate(key), [key]);
 
   if (key.length === 48) {

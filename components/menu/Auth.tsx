@@ -1,8 +1,9 @@
 import { Environment, parseEnvironment } from "../../lib/utilities/environmentUtilities";
 import { createContext, useEffect, useState } from "react";
-
 import { Login } from "./Login";
 import { useStorage } from "../../lib/hooks/storage";
+
+const HUME_API_KEY = process.env.REACT_APP_HUME_API_KEY;
 
 type ChildElement = JSX.Element | string;
 
@@ -26,7 +27,7 @@ type AuthProps = {
 
 function Auth({ children }: AuthProps) {
   const [auth, setAuth] = useState<AuthState>({
-    key: null,
+    key: HUME_API_KEY || null,
     environment: Environment.Prod,
     unauthenticate: unauthenticate,
     setEnvironment: setEnvironment,
@@ -38,7 +39,11 @@ function Auth({ children }: AuthProps) {
     if (key) {
       console.log("Got key from session storage");
       setAuth((oldAuth) => ({ ...oldAuth, key }));
+    } else if (HUME_API_KEY) {
+      setKey(HUME_API_KEY);
+      setAuth((oldAuth) => ({ ...oldAuth, key: HUME_API_KEY }));
     }
+
     if (env) {
       console.log("Got environment from session storage");
       const environment = parseEnvironment(env);

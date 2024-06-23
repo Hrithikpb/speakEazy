@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 import { Optional } from "../utilities/typeUtilities";
 
 export function useStorage(key: string) {
