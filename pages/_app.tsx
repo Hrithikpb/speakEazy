@@ -22,13 +22,11 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
 
       <div className="min-w-screen min-h-screen bg-neutral-100 font-main font-thin text-neutral-800">
-        <Auth> 
+        <Auth>
           <Nav />
-          <>
-            <div>
-              <Component {...pageProps} />
-            </div>
-          </>
+          <div>
+            <Component {...pageProps} />
+          </div>
         </Auth>
       </div>
     </>
