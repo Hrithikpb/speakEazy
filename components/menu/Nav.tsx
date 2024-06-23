@@ -5,15 +5,13 @@ export function Nav() {
     <div>
       <div className="flex w-full items-center justify-between px-10 py-5 md:w-auto md:rounded-full">
         <Link href="/">
-          <img src="/hume-logo.svg" alt="logo" width={100} />
+          <p className="font-medium">SpeakEazy</p>
         </Link>
 
         <div className="text-xs hidden md:block lg:text-sm">
           <NavItem route="/" name="Home" />
-          <NavItem route="/face" name="Facial Expression" />
-          <NavItem route="/burst" name="Vocal Burst" />
-          <NavItem route="/prosody" name="Speech Prosody" />
-          <NavItem route="/language" name="Written Language" />
+          <NavItem route="/face" name="Video" />
+          <NavItem route="/burst" name="Audio" />
         </div>
       </div>
 

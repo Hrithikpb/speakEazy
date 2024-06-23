@@ -229,7 +229,7 @@ export function FaceWidgets({ onCalibrate }: FaceWidgetsProps) {
 
   return (
     <div>
-      <div className="md:flex">
+      <div className="md:flex justify-center items-center">
         <FaceTrackedVideo
           className="mb-6"
           onVideoReady={onVideoReady}
